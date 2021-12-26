@@ -1,9 +1,6 @@
 import React from 'react'
 
-function MenuItem(props) {
-    let image = props.image;
-    let name = props.name;
-    let price = props.price;
+function MenuItem({image, name, price}) {
 
     return (
         <div className="menuItem">
