@@ -11,11 +11,11 @@ function Menu() {
             <h1 className='menuTitle'> Our Menu </h1>
             <input placeholder="Enter Post Title" onChange={event => setQuery(event.target.value)} />
             <div className='menuList'>
-                {MenuList.filter(post => {
+                {MenuList.filter(coffee => {
                   if (query === '') {
-                    return post;
-                  } else if (post.name.toLowerCase().includes(query.toLowerCase())) {
-                    return post;
+                    return coffee;
+                  } else if (coffee.name.toLowerCase().includes(query.toLowerCase())) {
+                    return coffee;
                   }
                 }).map((menuItem, key) => {
                     return <MenuItem key={key} name={menuItem.name} image={menuItem.image} price={menuItem.price} />
