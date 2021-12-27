@@ -50,23 +50,6 @@
   font-size: 15px;
 }
 
-.headerContainer button:hover {
-  text-decoration: none;
-  background-color: #07090a;
-  cursor: pointer;
-  transition: 0.3s ease-in;
-}
-
-.text {
-  display: inline-flex;
-  text-decoration: none;
-  margin-top: 4px;
-}
-
-#arrow {
-  padding-left: 8px;
-}
-
 @media only screen and (max-width: 650px) {
   .home {
     justify-content: center;
@@ -86,25 +69,50 @@
     color: white;
   }
   
-    .headerContainer h1 {
-      font-size: 40px;
-      height: 30px;
-      color: white;
-    }
-  
-    .headerContainer p {
-      font-size: 30px;
-      color: white;
-    }
-  
-    .headerContainer button {
-      background-color: white;
-      color: #121619;
-      margin-bottom: 30px;
-    }
-  
-    .headerContainer button:hover {
-      background-color: rgb(225, 225, 225);
-      color: #121619;
-    }
+  .headerContainer h1 {
+    font-size: 40px;
+    height: 30px;
+    color: white;
   }
+
+  .headerContainer p {
+    font-size: 30px;
+    color: white;
+  }
+
+  .headerContainer button {
+    background-color: white;
+    color: #121619;
+    margin-bottom: 30px;
+  }
+
+  .headerContainer button:hover {
+    background-color: rgb(225, 225, 225);
+    color: #121619;
+  }
+}
+
+#order_btn span {
+  font-size: 18px;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+#order_btn span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+#order_btn:hover span {
+  padding-right: 25px;
+}
+
+#order_btn:hover span:after {
+  opacity: 1;
+  right: 0;
+}

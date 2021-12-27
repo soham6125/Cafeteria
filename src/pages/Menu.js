@@ -12,7 +12,10 @@ function Menu() {
     return (
         <div className='menu'>
             <h1 className='menuTitle'> Our Menu </h1>
-            <input placeholder="Enter Post Title" onChange={event => setQuery(event.target.value)} />
+            <div class="search-box">
+                <button class="btn-search"><i class="fa fa-search"></i></button>
+                <input type="text" class="input-search" placeholder="Search your favourite coffee..." onChange={e => setQuery(e.target.value)}/>
+            </div>
             <div className='menuList'>
                 {newList.map((menuItem, key) => {
                     return <MenuItem key={key} name={menuItem.name} image={menuItem.image} price={menuItem.price} />
