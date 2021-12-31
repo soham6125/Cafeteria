@@ -1,9 +1,11 @@
 import React from 'react'
+import { motion } from 'framer-motion';
 import Image from '../assets/feedback.jpeg'
 import '../styles/Contact.css'
 
 function Contact() {
     return (
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
         <div className='contact'>
             <div className='leftSide' style={{backgroundImage: `url(${Image})`}}>
                 
@@ -21,6 +23,7 @@ function Contact() {
                 </form>
             </div>
         </div>
+        </motion.div>
     )
 }
 

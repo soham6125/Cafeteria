@@ -52,8 +52,6 @@
   margin-left: 20px;
 }
 
-
-
 * {
   box-sizing: border-box;
 }
@@ -76,7 +74,7 @@
   padding-right: 40px;
 }
 .input-search::placeholder {
-  color: black;
+  color: #708090;
   font-size: 18px;
   letter-spacing: 2px;
   font-weight: 100;
@@ -91,8 +89,8 @@
   cursor: pointer;
   border-radius: 50%;
   position: absolute;
-  right: 0px;
-  top: -5px;
+  right: 18px;
+  top: -16px;
   background-color: #22a6b3;
 }
 i {
