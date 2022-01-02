@@ -8,8 +8,6 @@
 }
 
 .menu .menuTitle {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
   font-size: 60px;
 }
 
@@ -55,11 +53,18 @@
 * {
   box-sizing: border-box;
 }
-.search-box {
+
+.menu-top {
+  width: auto;
+  border: 2px solid yellow;
+}
+
+#search-box {
   position: relative;
   margin-bottom: 10px;
   padding-bottom: 20px;
 }
+
 .input-search {
   height: 50px;
   width: 50px;
@@ -73,12 +78,14 @@
   background-color: transparent;
   padding-right: 40px;
 }
+
 .input-search::placeholder {
   color: #708090;
   font-size: 18px;
   letter-spacing: 2px;
   font-weight: 100;
 }
+
 .btn-search {
   box-shadow: 0 10px 30px #d0d0d0;
   width: 50px;
@@ -93,9 +100,11 @@
   top: -16px;
   background-color: #22a6b3;
 }
+
 i {
   color: white;
 }
+
 .btn-search:focus ~ .input-search {
   width: 500px;
   border-radius: 0px;
@@ -103,6 +112,7 @@ i {
   border-bottom: 1px solid black;
   transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
 }
+
 .input-search:focus {
   width: 500px;
   border-radius: 0px;

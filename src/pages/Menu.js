@@ -7,44 +7,46 @@ import '../styles/Menu.css'
 function Menu() {
     const [data, setData] = useState(MenuList)
     const [query, setQuery] = useState("")
-    // const [sortType, setSortType] = useState('alphabetical');
+    const [sortType, setSortType] = useState("alphabetical");
 
-    // const comparePrice = (a,b) => {
-    //     return a - b;
-    // }
-    
     const handleSubmit = (e) => {
         e.preventDefault();
         setData(MenuList.filter(coffee => (coffee.name.toLowerCase().includes(query.toLowerCase()))));
     }
 
-    // useEffect(() => {
-    //     if(sortType === 'price') data.sort(comparePrice);
-    //     else data.sort();
-    // }, [sortType, data])
+    const handleSubmitTwo = (e) => {
+        setSortType(e.target.value);
+        if(sortType === 'price') setData((data) => data.sort((a, b) => a.price > b.price ? 1 : -1));
+        else if(sortType === 'alphabetical') setData((data) => data.sort((a, b) => a.name.toLowerCase() > b.name.toLowerCase() ? 1 : -1));
+    }
 
     return (
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
         <div className='menu'>
             <h1 className='menuTitle'> Our Menu </h1>
-            <div class="search-box">
-                <form onSubmit={handleSubmit}>
-                    <button class="btn-search"><i class="fa fa-search"></i></button>
-                    <input 
-                     type="text" 
-                     class="input-search" 
-                     placeholder="Search your favourite coffee..."
-                     value={query}
-                     onChange={(e) => setQuery(e.target.value)}
-                    />
-                </form>
-                {/* <select
-                 value={sortType} 
-                 onChange={(e) => setSortType(e.target.value)}
-                >
-                    <option value="alphabetical"> Alphabetical </option>
-                    <option value="price"> Price </option>
-                </select> */}
+            <div className='grid-container' style={{ display: "flex"}}>
+                <div className='item-1'> 
+                    <form onSubmit={handleSubmit} id="search-box">
+                        <button class="btn-search"><i class="fa fa-search"></i></button>
+                        <input 
+                         type="text" 
+                         class="input-search" 
+                         placeholder="Search your favourite coffee..."
+                         value={query}
+                         onChange={(e) => setQuery(e.target.value)}
+                        />
+                    </form>
+                </div>
+                <div id='sorttype-box'>
+                    <label> Sort by: </label>
+                    <select
+                     value={sortType} 
+                     onChange={handleSubmitTwo}
+                    >
+                        <option value='alphabetical'> Alphabetical </option>
+                        <option value='price'> Price </option>
+                    </select>
+                </div>
             </div>
             <div className='menuList'>
                 {data.map((menuItem, key) => {

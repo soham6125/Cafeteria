@@ -12,46 +12,46 @@ export const MenuList = [
   {
     name: "Espresso",
     image: Espresso,
-    price: 5.00,
+    price: 200,
   },
   {
     name: "Cappuccino",
     image: Cappuccino,
-    price: 5.00,
+    price: 215,
   },
   {
     name: "Glace",
     image: Glace,
-    price: 5.50,
+    price: 150,
   },
   {
     name: "Latte",
     image: Latte,
-    price: 6.00,
+    price: 175,
   },
   {
     name: "Cocoa",
     image: Cocoa,
-    price: 6.50,
+    price: 300,
   },
   {
     name: "Marochinno",
     image: Marochinno,
-    price: 6.00,
+    price: 225,
   },
   {
     name: "Americano",
     image: Americano,
-    price: 5.00,
+    price: 175,
   },
   {
     name: "Antoccino",
     image: Antoccino,
-    price: 5.45,
+    price: 205,
   },
   {
     name: "Mocha",
     image: Mocha,
-    price: 7.00,
+    price: 195,
   }
 ];
