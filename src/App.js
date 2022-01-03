@@ -7,9 +7,9 @@ import Footer from './components/Footer';
 import Menu from './pages/Menu';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import Gallery from './pages/Gallery';
 
 function App() {
-  // let location = useLocation(); 
 
   return (
     <div className="App">
@@ -21,6 +21,7 @@ function App() {
               <Route path="/menu"> <Menu /> </Route>
               <Route path="/about"> <About /> </Route>
               <Route path="/contact"> <Contact /> </Route>
+              <Route path="/gallery"> <Gallery /> </Route>
             </Switch>
           </AnimatePresence>
         <Footer />

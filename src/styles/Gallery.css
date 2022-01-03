@@ -1,0 +1,46 @@
+.gallery {
+    margin-left: 80px;
+    margin-right: 80px;
+    display: flex;
+    padding: 2px;
+    transition: 0.3s;
+    max-height: 740px;
+    margin-bottom: 30px;
+}
+
+.gallery:hover .gallery__image {
+    filter: grayscale(1);
+}
+
+.gallery__column {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+}
+
+.gallery__link {
+    margin: 2px;
+    overflow: hidden;
+}
+
+.gallery__link:hover {
+    box-shadow: 2px red;
+}
+
+.gallery__link:hover .gallery__image {
+    filter: grayscale(0);
+}
+
+.gallery__image {
+    width: 100%;
+    transition: 0.3s;
+}
+
+.gallery__image:hover {
+    transform: scale(1.1);
+}
+
+.gallery-title {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    font-size: 40px;
+  }

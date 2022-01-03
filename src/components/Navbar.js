@@ -14,19 +14,21 @@ function Navbar() {
     return (
         <div className='navbar'>
             <div className='leftside' id={openLinks ? "open" : "close"}>
-                <img src={Logo} alt="text"/>
+                <Link to="/" className='logo-image'> <img src={Logo} alt="text"/> </Link>
                 <div className='hiddenLinks'>
-                    <Link to="/" className='link-2'> Home </Link>
-                    <Link to="/menu"> Menu </Link> 
-                    <Link to="/about"> About </Link>
-                    <Link to="/contact"> Contact </Link>
+                    <Link to="/" style={{ fontSize: 15 }}> HOME </Link>
+                    <Link to="/menu" style={{ fontSize: 15 }}> MENU </Link> 
+                    <Link to="/gallery" style={{ fontSize: 15 }}> GALLERY </Link>
+                    <Link to="/about" style={{ fontSize: 15 }}> ABOUT </Link>
+                    <Link to="/contact" style={{ fontSize: 15 }}> CONTACT </Link>
                 </div>
             </div>
             <div className='rightside'>
-                <Link to="/"> Home </Link>
-                <Link to="/menu"> Menu </Link> 
-                <Link to="/about"> About </Link>
-                <Link to="/contact"> Contact </Link>
+                <Link to="/" style={{ fontSize: 15 }}> HOME </Link>
+                <Link to="/menu" style={{ fontSize: 15 }}> MENU </Link> 
+                <Link to="/gallery" style={{ fontSize: 15 }}> GALLERY </Link>
+                <Link to="/about" style={{ fontSize: 15 }}> ABOUT </Link>
+                <Link to="/contact" style={{ fontSize: 15 }}> CONTACT </Link>
                 <button onClick={toggleNavbar}>
                     <ReorderIcon />
                 </button> 

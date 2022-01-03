@@ -16,8 +16,8 @@
 
 .navbar .leftside img {
   margin-left: 50px;
-  width: 60px;
-  height: 70px;
+  width: 50px;
+  height: 60px;
 }
   
 .navbar .rightside {
@@ -51,7 +51,7 @@
 }
   
 .navbar .rightside svg {
-  font-size: 40px;
+  font-size: 35px;
 }
   
 .navbar #open {
@@ -73,6 +73,11 @@
   
 .navbar #close .hiddenLinks {
   display: none;
+}
+
+.logo-image:hover {
+  text-decoration: none;
+  border: none
 }
 
 @media only screen and (max-width: 900px) {

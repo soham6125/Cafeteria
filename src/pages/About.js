@@ -1,15 +1,18 @@
 import { motion } from 'framer-motion'
-import React from 'react'
+import {React, useState} from 'react'
 import Image from '../assets/about_us.jpg'
+import Popup from '../components/Popup'
 import '../styles/About.css'
 
 function About() {
+    const [buttonPopup, setButtonPopup] = useState(false);
+
     return (
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
             <div className='about'>
                 <div className='aboutTop' style={{backgroundImage: `url(${Image})`}}></div>
                 <div className='aboutBottom'>
-                    <h1> About Us </h1>
+                    <h1> Our Story </h1>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
                         mollitia, molestiae quas vel sint commodi repudiandae consequuntur
@@ -25,7 +28,9 @@ function About() {
                         Perspiciatis minima nesciunt dolorem! Officiis iure rerum voluptates a
                         cumque velit
                     </p>
+                    <button className='btn-about from-left' onClick={() => setButtonPopup(true)}> View Full Story </button>
                 </div>
+                { buttonPopup && <Popup setButtonPopup={setButtonPopup} /> }
             </div>
         </motion.div>
     )

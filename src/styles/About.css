@@ -17,16 +17,17 @@
 .aboutBottom {
   display: flex;
   flex-direction: column;
-  height: 55%;
+  height: 75%;
   align-items: center;
   margin-top: 50px;
 }
 
 .aboutBottom p {
-  width: 1200px;
+  width: 1000px;
 }
 
 .about .aboutBottom h1 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   font-weight: 400;
   font-size: 70px;
   color: black;
@@ -34,4 +35,13 @@
   display: flex;
   justify-content: center;
   transform: translateY(-40px);
+}
+
+.btn-about {		
+	position: relative;	
+	padding: 10px;
+	font-size: 1.0rem;
+	letter-spacing: 2px;
+	border-radius: 5px;
+	cursor: pointer;  
 }
