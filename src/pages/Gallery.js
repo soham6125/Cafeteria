@@ -17,23 +17,23 @@ import '../styles/Gallery.css'
 function Gallery() {
     return (
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
-            <div>
+            <div className='gallery-div'>
                 <div className='gallery-title'>
                     <h1 style={{ display: 'flex', justifyContent: 'center' }}> Our Gallery </h1>
                 </div>
                 <div class='gallery'>
 	                <div class="gallery__column">
-	                	<a href="/" class="gallery__link">
+	                	<a href="#/" onclick="return false;" class="gallery__link">
 	                		<div>
 	                			<img src={ image1 } alt="text" class="gallery__image" />
 	                		</div>
 	                	</a>
-	                	<a href="/" class="gallery__link">
+	                	<a href="#/" onclick="return false;" class="gallery__link">
 	                		<div>
 	                			<img src={ image2 } alt="text" class="gallery__image"/>
 	                		</div>
 	                	</a>
-	                	<a href="/" class="gallery__link">
+	                	<a href="#/" onclick="return false;" class="gallery__link">
 	                		<div>
 	                			<img src={ image3 } alt="text" class="gallery__image"/>             		
                             </div>
@@ -41,17 +41,17 @@ function Gallery() {
 	                </div>
 
 	                <div class="gallery__column">
-	                	<a href="/" class="gallery__link">
+	                	<a href="#/" onclick="return false;" class="gallery__link">
 	                		<div>
 	                			<img src={ image4 } alt="text" class="gallery__image"/>               		
                             </div>
 	                	</a>
-	                	<a href="/" class="gallery__link">
+	                	<a href="#/" onclick="return false;" class="gallery__link">
 	                		<div>
 	                			<img src={ image5 } alt="text" class="gallery__image"/>               		
                             </div>
 	                	</a>
-	                	<a href="/" class="gallery__link">
+	                	<a href="#/" onclick="return false;" class="gallery__link">
 	                		<div>
 	                			<img src={ image6 } alt="text" class="gallery__image"/>              		
                             </div>
@@ -59,17 +59,17 @@ function Gallery() {
 	                </div>
 
 	                <div class="gallery__column">
-	                	<a href="/" class="gallery__link">
+	                	<a href="#/" onclick="return false;" class="gallery__link">
 	                		<div>
 	                			<img src={ image7 } alt="text" class="gallery__image"/>               		
                             </div>
 	                	</a>
-	                	<a href="/" class="gallery__link">
+	                	<a href="#/" onclick="return false;" class="gallery__link">
 	                		<div>
 	                			<img src={ image8 } alt="text" class="gallery__image"/>               		
                             </div>
 	                	</a>
-	                	<a href="/" class="gallery__link">
+	                	<a href="#/" onclick="return false;" class="gallery__link">
 	                		<div>
 	                			<img src={ image9 } alt="text" class="gallery__image"/>               		
                             </div>
@@ -77,17 +77,17 @@ function Gallery() {
 	                </div>
 
 	                <div class="gallery__column">
-	                	<a href="/" class="gallery__link">
+	                	<a href="#/" onclick="return false;" class="gallery__link">
 	                		<div>
 	                			<img src={ image10 } alt="text" class="gallery__image"/>
 	                		</div>
 	                	</a>
-	                	<a href="/" class="gallery__link">
+	                	<a href="#/" onclick="return false;" class="gallery__link">
 	                		<div>
 	                			<img src={ image11 } alt="text" class="gallery__image"/>              		
                             </div>
 	                	</a>
-	                	<a href="/" class="gallery__link">
+	                	<a href="#/" onclick="return false;" class="gallery__link">
 	                		<div>
 	                			<img src={ image12 } alt="text" class="gallery__image"/>	                		
                             </div>

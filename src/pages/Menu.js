@@ -42,7 +42,7 @@ function Menu() {
                     <FormControl fullWidth>
                         <InputLabel id="select-label"> Sort by: </InputLabel>
                         <Select
-                         style={{ minWidth: 150, marginBottom: 20, height: 50 }}
+                         style={{ minWidth: 150, marginBottom: 20, height: 50, backgroundColor: 'white' }}
                          labelId="select-label"
                          label="Sort by:"
                          value={sortType} 
