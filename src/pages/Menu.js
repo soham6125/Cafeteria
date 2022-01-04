@@ -1,18 +1,29 @@
-import { React, useState } from 'react'
+import { React, useState, useEffect } from 'react'
 import { motion } from 'framer-motion';
 import MenuItem from '../components/MenuItem'
-import { MenuList } from '../helpers/MenuList'
 import '../styles/Menu.css'
 import { Select, MenuItem as Option, InputLabel, FormControl } from '@mui/material';
 
 function Menu() {
-    const [data, setData] = useState(MenuList)
+    const [data, setData] = useState(null)
     const [query, setQuery] = useState("")
     const [sortType, setSortType] = useState('');
 
+    useEffect(() => {
+        fetch("http://localhost:8000/MenuList")
+        .then(res => {
+          if(!res.ok) {
+            throw Error("Could not fetch data");
+          }
+          return res.json();
+        })
+        .then((data) => {
+          setData(data);
+        })
+    }, [])
+
     const handleSubmit = (e) => {
         e.preventDefault();
-        setData(MenuList.filter(coffee => (coffee.name.toLowerCase().includes(query.toLowerCase()))));
     }
 
     const handleSubmitTwo = (e) => {
@@ -24,43 +35,46 @@ function Menu() {
     }
 
     return (
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
-        <div className='menu'>
-            <h1 className='menuTitle'> Our Menu </h1>
-            <div className='search-bar' style={{ display: "flex", alignItems: "center", width: "60vw", justifyContent: "space-between" }}>
-                <form onSubmit={handleSubmit} id="search-box" style={{ display: "flex", flexGrow: 2, flexDirection: "row", alignItems: "center" }}>
-                    <input 
-                     type="text" 
-                     class="input-search" 
-                     placeholder="Search for your favourite coffee..."
-                     value={query}
-                     onChange={(e) => setQuery(e.target.value)}
-                    />
-                    <button class="btn-search"><i class="fa fa-search"></i></button>
-                </form>
-                <div>
-                    <FormControl fullWidth>
-                        <InputLabel id="select-label"> Sort by: </InputLabel>
-                        <Select
-                         style={{ minWidth: 150, marginBottom: 20, height: 50, backgroundColor: 'white' }}
-                         labelId="select-label"
-                         label="Sort by:"
-                         value={sortType} 
-                         onChange={handleSubmitTwo}
-                        >
-                            <Option value={'name'}> Name </Option>
-                            <Option value={'price'}> Price </Option>
-                        </Select>
-                    </FormControl>
+        <div>
+            {data && 
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+            <div className='menu'>
+                <h1 className='menuTitle'> Our Menu </h1>
+                <div className='search-bar' style={{ display: "flex", alignItems: "center", width: "60vw", justifyContent: "space-between" }}>
+                    <form onSubmit={handleSubmit} id="search-box" style={{ display: "flex", flexGrow: 2, flexDirection: "row", alignItems: "center" }}>
+                        <input 
+                         type="text" 
+                         className="input-search" 
+                         placeholder="Search for your favourite coffee..."
+                         value={query}
+                         onChange={(e) => setQuery(e.target.value)}
+                        />
+                        <button className="btn-search"><i className="fa fa-search"></i></button>
+                    </form>
+                    <div>
+                        <FormControl fullWidth>
+                            <InputLabel id="select-label"> Sort by: </InputLabel>
+                            <Select
+                             style={{ minWidth: 150, marginBottom: 20, height: 50, backgroundColor: 'white' }}
+                             labelId="select-label"
+                             label="Sort by:"
+                             value={sortType} 
+                             onChange={handleSubmitTwo}
+                            >
+                                <Option value={'name'}> Name </Option>
+                                <Option value={'price'}> Price </Option>
+                            </Select>
+                        </FormControl>
+                    </div>
+                </div>
+                <div className='menuList'>
+                    {data.filter(coffee => (coffee.name.toLowerCase().includes(query.toLowerCase()))).map((menuItem, key) => {
+                        return <MenuItem key={key} name={menuItem.name} image={"http://localhost:3001/images/" + menuItem.image.substring(9)} price={menuItem.price} />
+                    })}
                 </div>
             </div>
-            <div className='menuList'>
-                {data.map((menuItem, key) => {
-                    return <MenuItem key={key} name={menuItem.name} image={menuItem.image} price={menuItem.price} />
-                })}
-            </div>
+            </motion.div>}
         </div>
-        </motion.div>
     )
 }
 

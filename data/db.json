@@ -1,0 +1,49 @@
+{
+  "MenuList" : [
+  {
+    "name": "Espresso",
+    "image": "../assets/Espresso.gif",
+    "price": 200
+  },
+  {
+    "name": "Cappuccino",
+    "image": "../assets/Cappuccino.jpg",
+    "price": 215
+  },
+  {
+    "name": "Glace",
+    "image": "../assets/Glace.jpg",
+    "price": 150
+  },
+  {
+    "name": "Latte",
+    "image": "../assets/Latte.jpg",
+    "price": 175
+  },
+  {
+    "name": "Cocoa",
+    "image": "../assets/Cocoa.jpg",
+    "price": 300
+  },
+  {
+    "name": "Marochinno",
+    "image": "../assets/Marochinno.jpg",
+    "price": 225
+  },
+  {
+    "name": "Americano",
+    "image": "../assets/Americano.jpg",
+    "price": 175
+  },
+  {
+    "name": "Antoccino",
+    "image": "../assets/Antoccino.jpg",
+    "price": 205
+  },
+  {
+    "name": "Mocha",
+    "image": "../assets/Mocha.jpg",
+    "price": 195
+  }
+]
+}
