@@ -1,0 +1,84 @@
+.contact {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  background-image: url('../assets/bgImage.jpg');
+}
+
+.contact .leftSide {
+  height: 100%;
+  flex: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contact .rightSide {
+  height: 100%;
+  flex: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact .rightSide h1 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-weight: 10;
+  font-size: 50px;
+  margin-left: 30px;
+}
+
+#contact-form > label {
+  margin-top: 15px;
+  color: black;
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: auto;
+  padding: 30px;
+}
+
+#contact-form > input {
+  background-color: transparent;
+  height: 40px;
+  width: 80%;
+  border: none;
+  border-bottom: 1px solid #121619;
+  color: black;
+}
+
+#contact-form > textarea {
+  background-color: transparent;
+  margin-top: 15px;
+  height: 70px;
+  width: 80%;
+  border: none;
+  border-bottom: 1px solid #121619;
+  color: black;
+}
+
+#contact-form > input::placeholder,
+#contact-form > textarea::placeholder {
+  color: grey;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#contact-form > input:focus,
+textarea:focus {
+  outline: none;
+}
+
+#contact-form > button {
+  border-radius: 5px;
+  margin-top: 40px;
+  width: 120px;
+  height: 40px;
+  border: none;
+  background-color: #121619;
+  color: whitesmoke;
+  font-size: 17px;
+  cursor: pointer;
+}
