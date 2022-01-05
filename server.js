@@ -7,7 +7,7 @@ const app = express();
 app.use(cors());
 const data = JSON.parse(readFileSync(path.resolve('./db.json'), 'utf-8'));
 const PORT = process.env.PORT || 3001;                 
-app.use(express.static('public')); 
+app.use(express.static('client')); 
 app.use('/images', express.static('images'));
 app.get('/data', (req, res) => {
   return res.json(data);
