@@ -4,8 +4,8 @@ import MenuItem from '../components/MenuItem'
 import '../styles/Menu.css'
 import { Select, MenuItem as Option, InputLabel, FormControl } from '@mui/material';
 
-const local_url = "http://localhost:3001/data";
-// const SERVER_URL = "https://cafeteria-shop.herokuapp.com";
+// const local_url = "http://localhost:3001/data";
+const SERVER_URL = "https://cafeteria-shop.herokuapp.com/data";
 
 function Menu() {
     const [data, setData] = useState(null)
@@ -13,7 +13,7 @@ function Menu() {
     const [sortType, setSortType] = useState('');
 
     useEffect(() => {
-        fetch(local_url)
+        fetch(SERVER_URL)
         .then(res => {
           if(!res.ok) {
             throw Error("Could not fetch data");
