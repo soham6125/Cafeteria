@@ -4,6 +4,7 @@ import MenuItem from '../components/MenuItem'
 import '../styles/Menu.css'
 import { Select, MenuItem as Option, InputLabel, FormControl } from '@mui/material';
 
+// const local_url = "http://localhost:3001/data";
 const SERVER_URL = "https://cafeteria-shop.herokuapp.com";
 
 function Menu() {
