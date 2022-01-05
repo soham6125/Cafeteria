@@ -40,12 +40,11 @@ function Menu() {
                         <button className="btn-search"><i className="fa fa-search"></i></button>
                     </form>
                     <div>
-                        <FormControl fullWidth>
-                            <InputLabel id="select-label"> Sort by: </InputLabel>
+                        <FormControl>
+                            <InputLabel> Sort by: </InputLabel>
                             <Select
                              style={{ minWidth: 150, marginBottom: 20, height: 50, backgroundColor: 'white' }}
                              labelId="select-label"
-                             label="Sort by:"
                              value={sortType} 
                              onChange={handleSubmitTwo}
                             >

@@ -19,7 +19,7 @@ function Gallery() {
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
             <div className='gallery-div'>
                 <div className='gallery-title'>
-                    <h1 style={{ display: 'flex', justifyContent: 'center' }}> Our Gallery </h1>
+                    <h1 style={{ display: 'flex', justifyContent: 'center', color: 'white' }}> Our Gallery </h1>
                 </div>
                 <div class='gallery'>
 	                <div class="gallery__column">

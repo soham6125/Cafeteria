@@ -1,5 +1,6 @@
 .gallery-div {
-    background-image: url('../assets/bgImage.jpg');
+    margin-top: 20px;
+    background: #010103;
     width: 100%;
     height: auto;
     display: flex;

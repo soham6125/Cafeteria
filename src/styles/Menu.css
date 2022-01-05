@@ -1,5 +1,6 @@
 .menu {
-  background-image: url('../assets/bgImage.jpg');
+  margin-top: 30px;
+  background: #010103;
   width: 100%;
   height: auto;
   display: flex;
@@ -9,7 +10,10 @@
 }
 
 .menu .menuTitle {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   font-size: 60px;
+  color: white;
+  margin-bottom: 50px;
 }
 
 .menuList {
@@ -21,7 +25,7 @@
 }
 
 .menuItem {
-  background-color: white;
+  background-color: #eceaea;
   border-radius: 15px;
   width: 300px;
   height: 300px;
@@ -31,7 +35,7 @@
 
 .menuItem:hover {
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
-  transition: 0.3s ease-in;
+  transition: 0.3s ease-in-out;
   cursor: pointer;
   transform: scale(1.05);
 }
@@ -44,6 +48,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 }
 
 .menuItem h1,
@@ -63,10 +68,11 @@
 }
 
 .input-search {
+  color: white;
   height: 50px;
   width: 550px;
   border-style: none;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid white;
   padding: 10px;
   font-size: 18px;
   letter-spacing: 2px;
@@ -75,7 +81,7 @@
 }
 
 .input-search::placeholder {
-  color: black;
+  color: white;
   font-size: 18px;
   letter-spacing: 2px;
   font-weight: 100;

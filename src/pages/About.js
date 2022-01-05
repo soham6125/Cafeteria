@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion'
 import {React, useState} from 'react'
-import Image from '../assets/about_us.jpg'
 import Popup from '../components/Popup'
 import '../styles/About.css'
 
@@ -10,7 +9,6 @@ function About() {
     return (
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
             <div className='about'>
-                <div className='aboutTop' style={{backgroundImage: `url(${Image})`}}></div>
                 <div className='aboutBottom'>
                     <h1> Our Story </h1>
                     <p>
