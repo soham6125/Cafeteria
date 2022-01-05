@@ -4,13 +4,15 @@ import MenuItem from '../components/MenuItem'
 import '../styles/Menu.css'
 import { Select, MenuItem as Option, InputLabel, FormControl } from '@mui/material';
 
+const SERVER_URL = "https://cafeteria-shop.herokuapp.com";
+
 function Menu() {
     const [data, setData] = useState(null)
     const [query, setQuery] = useState("")
     const [sortType, setSortType] = useState('');
 
     useEffect(() => {
-        fetch("http://localhost:3001/data")
+        fetch(SERVER_URL + "/data")
         .then(res => {
           if(!res.ok) {
             throw Error("Could not fetch data");
