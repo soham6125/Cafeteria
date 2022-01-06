@@ -2,20 +2,51 @@
   margin-top: 40px;
   color: white;
   width: 100%;
-  height: 90vh;
+  height: 100%;
   background: #010103;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 60px;
 }
 
-.contact .rightSide {
+.rightSide {
   height: 100%;
   flex: 50%;
   display: flex;
-  max-width: 600px;
+  width: 500px;
   flex-direction: column;
+  justify-content: center;
+  align-self: center;
 }
 
+.contactDetails {
+  margin-left: 200px;
+  margin-right: 200px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 60px;
+  margin-bottom: 30px;
+}
+.details-item {
+  height: 300px;
+  width: 340px;
+  max-height: 100%;
+  padding: 20px;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 2px #ed1b76;
+}
+i {
+  color: #ed1b76;
+}
+.card-detail {
+  padding-bottom: 10px;
+  color: #ed1b76;
+}
+.logo {
+  width: 50px;
+  padding-top: 10px;
+}
 .contact h1 {
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
     font-size: 60px;
@@ -32,7 +63,6 @@
   margin-top: 15px;
   color: black;
 }
-
 #contact-form {
   border-radius: 5px;
   background-color: white;
@@ -41,13 +71,11 @@
   width: auto;
   height: auto;
   padding: 30px;
-  justify-content: center;
 }
-
 #contact-form > input {
   background-color: transparent;
   height: 40px;
-  width: 80%;
+  width: 100%;
   border: none;
   border-bottom: 1px solid #121619;
   color: black;
@@ -57,7 +85,7 @@
   background-color: transparent;
   margin-top: 15px;
   height: 70px;
-  width: 80%;
+  width: 100%;
   border: none;
   border-bottom: 1px solid #121619;
   color: black;
@@ -75,13 +103,32 @@ textarea:focus {
 }
 
 #contact-form > button {
+  align-self: center;
   border-radius: 5px;
   margin-top: 40px;
   width: 120px;
   height: 40px;
   border: none;
-  background-color: #121619;
-  color: whitesmoke;
+  background-color: #ed1b76;
+  color: white;
   font-size: 17px;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 1300px) {
+  .contactDetails {
+    grid-template-columns: auto auto;
+    align-self: center;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .contactDetails {
+    grid-template-columns: auto;
+    align-self: center;
+  }
+  #contact-form {
+    width: 400px;
+    align-self: center;
+  }
 }

@@ -14,7 +14,7 @@ function Navbar() {
     return (
         <div className='navbar'>
             <div className='leftside' id={openLinks ? "open" : "close"}>
-                <a href="#home" className='logo-image'> <img src={Logo} alt="text"/> </a>
+                <img src={Logo} alt="text"/>
                 <ul className='hiddenLinks'>
                     <li><Link to="home" activeClass="active" smooth={true} duration={500} style={{ fontSize: 15 }}> HOME </Link></li>
                     <li><Link to="menu" activeClass="active" smooth={true} duration={500} style={{ fontSize: 15 }}> MENU </Link> </li>

@@ -11,7 +11,7 @@ function About() {
             <div className='about'>
                 <div className='aboutBottom'>
                     <h1 className='aboutTitle'> Our <span style={{ color: '#ed1b76'}}> &nbsp;Story</span> </h1>
-                    <p>
+                    <p style={{ letterSpacing: 2 }}>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
                         mollitia, molestiae quas vel sint commodi repudiandae consequuntur
                         voluptatum laborum numquam blanditiis harum quisquam eius sed odit

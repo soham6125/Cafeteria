@@ -51,3 +51,15 @@
 	cursor: pointer;  
   border: 1px solid white;
 }
+
+@media only screen and (max-width: 850px){
+  .aboutBottom > p {
+    width: 650px;
+  }
+}
+
+@media only screen and (max-width: 650px){
+  .aboutBottom > p {
+    width: 450px;
+  }
+}
