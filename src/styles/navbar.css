@@ -23,6 +23,7 @@
 }
   
 .navbar .rightside {
+  margin-top: 0;
   flex: 50%;
   height: 100%;
   display: flex;
@@ -36,13 +37,14 @@
   text-decoration: none;
   display: inline-block;
   color: white;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid transparent;
   transition: 0.3s ease;
+  cursor: pointer;
 }
 
 .navbar a:hover {
-  color: #F506A4;
-  border-color: #F506A4;
+  color: #ed1b76;
+  border-color: #ed1b76;
 }
 
 .navbar .rightside button {
@@ -95,23 +97,16 @@
   .navbar .rightside a {
     display: none;
   }
-
   .navbar .rightside {
     justify-content: flex-end;
     padding-right: 50px;
   }
-
-  .navbar .rightside button {
-    display: inherit;
-  }
-  
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 700px) {
   .navbar .rightside button {
     display: none;
   }
-
   .hiddenLinks {
     display: none;
   }

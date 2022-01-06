@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import MenuItem from '../components/MenuItem'
 import '../styles/Menu.css'
 import { MenuList } from '../helpers/MenuList'
-import { Select, MenuItem as Option, InputLabel, FormControl } from '@mui/material';
+import { Select, MenuItem as Option, FormControl } from '@mui/material';
 
 function Menu() {
     const [data, setData] = useState(MenuList)
@@ -27,7 +27,7 @@ function Menu() {
             {data && 
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
             <div className='menu'>
-                <h1 className='menuTitle'> Our Menu </h1>
+                <h1 className='menuTitle'> Our <span style={{ color: '#ed1b76'}}> Menu </span> </h1>
                 <div className='search-bar' style={{ display: "flex", alignItems: "center", width: "60vw", justifyContent: "space-between" }}>
                     <form onSubmit={handleSubmit} id="search-box" style={{ display: "flex", flexGrow: 2, flexDirection: "row", alignItems: "center" }}>
                         <input 
@@ -39,12 +39,13 @@ function Menu() {
                         />
                         <button className="btn-search"><i className="fa fa-search"></i></button>
                     </form>
-                    <div>
+                    <div style={{ display: 'flex', flexDirection: 'column', paddingBottom: 20}}>
+                        <span style={{ color: 'white', paddingBottom: 10}}>Sort by:</span>
                         <FormControl>
-                            <InputLabel> Sort by: </InputLabel>
                             <Select
                              style={{ minWidth: 150, marginBottom: 20, height: 50, backgroundColor: 'white' }}
                              labelId="select-label"
+                             displayEmpty
                              value={sortType} 
                              onChange={handleSubmitTwo}
                             >

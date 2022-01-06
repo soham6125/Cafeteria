@@ -18,9 +18,7 @@ function Gallery() {
     return (
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
             <div className='gallery-div'>
-                <div className='gallery-title'>
-                    <h1 style={{ display: 'flex', justifyContent: 'center', color: 'white' }}> Our Gallery </h1>
-                </div>
+				<h1 className='menuTitle'> Our <span style={{ color: '#ed1b76'}}> Gallery </span> </h1>
                 <div class='gallery'>
 	                <div class="gallery__column">
 	                	<a href="#/" onclick="return false;" class="gallery__link">

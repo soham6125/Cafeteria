@@ -10,7 +10,7 @@ function About() {
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
             <div className='about'>
                 <div className='aboutBottom'>
-                    <h1> Our Story </h1>
+                    <h1 className='aboutTitle'> Our <span style={{ color: '#ed1b76'}}> &nbsp;Story</span> </h1>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
                         mollitia, molestiae quas vel sint commodi repudiandae consequuntur

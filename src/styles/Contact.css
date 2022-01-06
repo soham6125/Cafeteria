@@ -16,13 +16,18 @@
   flex-direction: column;
 }
 
-.contact .rightSide h1 {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  font-weight: 10;
-  font-size: 50px;
-  margin-left: 30px;
+.contact h1 {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    font-size: 60px;
+    color: white;
+    margin-bottom: 50px;
 }
-
+.aboutTitle {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-size: 60px;
+  color: white;
+  margin-bottom: 50px;
+}
 #contact-form > label {
   margin-top: 15px;
   color: black;

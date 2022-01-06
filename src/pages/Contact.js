@@ -7,7 +7,9 @@ function Contact() {
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
         <div className='contact'>
             <div className='rightSide'>
-                <h1 style={{ display: 'flex', justifyContent: 'center'}}> Contact Us </h1>
+                <h1 className='contactTitle' 
+                    style={{ display: 'flex', justifyContent: 'center'}}
+                > Contact <span style={{ color: '#ed1b76'}}> &nbsp;Us </span> </h1>
                 <form id='contact-form'>
                     <label htmlFor='name' style={{ text: 'black' }}> Full Name: </label>
                     <input name='name' placeholder='Enter Full Name' type='text'></input>
