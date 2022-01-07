@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 
 function Navbar() {
     const [openNavLinks, setopenNavLinks] = useState(false);
+    console.log(setopenNavLinks);
 
     // const toggleNavbar = () => {
     //     setopenNavLinks(!openNavLinks);
