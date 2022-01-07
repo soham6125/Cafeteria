@@ -48,13 +48,15 @@ i {
   padding-top: 10px;
 }
 .contact h1 {
-    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-    font-size: 60px;
-    color: white;
-    margin-bottom: 50px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 60px;
+  color: white;
+  margin-bottom: 50px;
 }
 .aboutTitle {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   font-size: 60px;
   color: white;
   margin-bottom: 50px;

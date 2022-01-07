@@ -7,7 +7,7 @@
   position: fixed;
   z-index: 10;
 }
-  
+
 .navbar .leftside {
   flex: 50%;
   height: 100%;
@@ -21,16 +21,14 @@
   width: 50px;
   height: 60px;
 }
-  
-.navbar .rightside {
+.rightside {
   margin-top: 0;
-  flex: 50%;
+  flex: 220%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
 .navbar a {
   padding: 0 6px 4px 6px;
   margin: 12px;
@@ -41,47 +39,55 @@
   transition: 0.3s ease;
   cursor: pointer;
 }
-
 .navbar a:hover {
   color: #ed1b76;
   border-color: #ed1b76;
 }
-
 .navbar .rightside button {
   background-color: transparent;
   border: none;
   color: white;
   cursor: pointer;
 }
-  
 .navbar .rightside svg {
   font-size: 35px;
 }
-  
 .navbar #open {
   padding-left: 0px;
 }
-
 .navbar #open img {
   display: none;
 }
-  
 .navbar #close img {
   display: inherit;
 }
-  
 .navbar #open .hiddenLinks {
   display: inherit;
   margin-left: 30px;
 }
-  
 .navbar #close .hiddenLinks {
   display: none;
 }
-
 .logo-image:hover {
   text-decoration: none;
-  border: none
+  border: none;
+}
+.logout-btn {
+  background-color: #ed1b76;
+  color: white;
+  margin-left: 120px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  align-items: center;
+  padding: 10px;
+  font-size: 0.8rem;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid white;
+  margin-right: 80px;
+}
+.auth-form {
+  margin-right: 100px;
 }
 
 @media only screen and (max-width: 900px) {
@@ -92,7 +98,7 @@
     padding-left: 50px;
   }
 }
-  
+
 @media only screen and (max-width: 700px) {
   .navbar .rightside a {
     display: none;
