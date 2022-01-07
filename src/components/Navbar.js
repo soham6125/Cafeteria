@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Logo from '../assets/logo.jpg'
 // import ReorderIcon from '@mui/icons-material/Reorder'
-import '../styles/Navbar.css'
+import '../styles/navbar.css'
 import { Link } from 'react-router-dom';
 
 function Navbar() {
